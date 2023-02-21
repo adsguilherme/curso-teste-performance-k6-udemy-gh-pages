@@ -26,6 +26,6 @@ jobs:
       - name: step 4 - publish report
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Essa secrets aqui não precisa definir nada dentro do git hub, pois esse GITHUB_TOKEN seria a nossa senha de acesso. E quando realizado o push a aplicação faz algumas validações, mas caso isso seja feito direto no repositório remoto, não irá ocorrer essas validações devido estar logado na aplicação web. 
           publish_branch: gh-pages
           publish_dir: report
